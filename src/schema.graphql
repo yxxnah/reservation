@@ -1,16 +1,10 @@
 type Query {
-  info: String!
-  feed: [Link!]!
+  bookingList: [Booked!]!
+  available: [Booked!]!
 }
 
 type Mutation {
   post(userId: String!, roomId: String!, started: String!, ended: String!): Booked!
-}
-
-type Link {
-  id: ID!
-  description: String!
-  url: String!
 }
 
 type Booked {
